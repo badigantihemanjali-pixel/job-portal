@@ -1,0 +1,376 @@
+/* Recruiter & Candidate Profile Dashboard Styles */
+
+/* Metrics Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.stat-icon.primary {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.stat-icon.success {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.stat-icon.warning {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Dashboard Action Bar */
+.dashboard-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-title-group h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.dashboard-title-group p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Recruiter Postings Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.dashboard-table th {
+  background: var(--bg-main);
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.dashboard-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.dashboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.dashboard-table tr:hover td {
+  background-color: var(--primary-light);
+}
+
+.table-job-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-job-title {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.table-job-company {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Candidate Profile Section */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-xs);
+  text-align: center;
+  position: relative;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.25rem;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  border: 4px solid var(--bg-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.profile-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.profile-headline {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.profile-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 1.25rem;
+}
+
+.profile-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Skills Management */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.skill-tag {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skill-tag .remove-skill-btn {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--primary);
+  cursor: pointer;
+  border-radius: var(--radius-full);
+}
+
+.skill-tag .remove-skill-btn:hover {
+  color: var(--danger);
+}
+
+.add-skill-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.add-skill-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+/* Applied Jobs Timeline / Cards */
+.profile-content-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-xs);
+  margin-bottom: 1.5rem;
+}
+
+.profile-section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.applied-job-item {
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--bg-main);
+  transition: all var(--transition-fast);
+}
+
+.applied-job-item:hover {
+  border-color: var(--primary-subtle);
+}
+
+.applied-job-details h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.applied-job-company {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0.2rem 0 0.4rem;
+}
+
+.applied-date {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+}
+
+/* Applicant Details Modal */
+.applicant-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background: var(--bg-main);
+}
+
+.applicant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.applicant-name {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+.applicant-email {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.applicant-cover-letter {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
